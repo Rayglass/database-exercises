@@ -7,7 +7,12 @@ CREATE TABLE albums (
                         artist_name VARCHAR(100),
                         record_name VARCHAR(100),
                         release_date INT(4),
+                        genre VARCHAR(150),
                         sales FLOAT(10),
-                        genre VARCHAR(50),
                         PRIMARY KEY (id)
 );
+
+
+SHOW TABLE;
+
+DESCRIBE albums;
