@@ -1,5 +1,7 @@
 USE codeup_test_db;
 
+TRUNCATE albums;
+
 INSERT INTO albums (artist_name, record_name, release_date, genre, sales)
 VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop, post-disco, funk, rock', 51.2),
        ('AC/DC', 'Back in Black', 1980, 'Hard rock', 30.1),
@@ -30,7 +32,8 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop, post-disco, funk, rock', 51.2
        ('The Beatles', 'Sgt. Pepper''s Lonely Hearts Club Band', 1967, 'Rock', 18.3),
        ('Michael Jackson', 'Dangerous', 1991, 'New jack swing, R&B and pop', 17.0),
        ('The Beatles', 'Abbey Road', 1969, 'Rock', 16.9);
-);
+
+
 SHOW TABLE;
 
 DESCRIBE albums;
