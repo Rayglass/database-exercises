@@ -7,7 +7,7 @@ SELECT * FROM albums WHERE artist_name = 'Pink Floyd';
 SELECT release_date FROM albums WHERE id = 27;
 
 -- The genre for Nevermind "does not work as Nevermind is not in our list" Would need to add it first
-SELECT release_date FROM albums WHERE record_name = Nevermind;
+SELECT genre FROM albums WHERE record_name = Nevermind;
 
 -- Which albums were released in the 1990s
 SELECT * FROM albums WHERE release_date = 1990 AND 1999;
