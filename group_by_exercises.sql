@@ -11,7 +11,7 @@ WHERE last_name LIKE 'E%' AND last_name LIKE '%E'
 GROUP BY last_name;
 
 # Update your previous query to now find unique combinations of first and last name where the last name starts and ends with 'E'.
-SELECT DISTINCT last_name, first_name
+SELECT last_name, first_name
 FROM employees
 WHERE last_name LIKE 'E%' AND last_name LIKE '%E'
 GROUP BY last_name, first_name;
