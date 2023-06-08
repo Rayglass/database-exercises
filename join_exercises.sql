@@ -38,14 +38,5 @@ WHERE s.to_date = '9999-01-01' AND dm.to_date = '9999-01-01'
 ORDER BY d.dept_name;
 
 # Bonus Find the names of all current employees, their department name, and their current manager's name .
-SELECT CONCAT(employees.first_name, ' ', employees.last_name) AS 'Employee Name', departments.dept_name AS 'Department Name',
-       CASE
-           WHEN (titles.title = 'manager'
-               AND titles.to_date LIKE '9%')
-               THEN employees.first_name END AS 'Manager Name'
-FROM departments
-         JOIN dept_emp ON departments.dept_no = dept_emp.dept_no
-         JOIN employees ON dept_emp.emp_no = employees.emp_no
-         JOIN titles ON employees.emp_no = titles.emp_no
-WHERE titles.to_date LIKE '9%'
-ORDER BY `Department Name`;
+
+
