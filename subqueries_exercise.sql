@@ -1,7 +1,8 @@
 USE employees;
 
 # Find all the employees with the same hire date as employee 101010 using a sub-query.
-SELECT CONCAT(first_name, ' ', last_name)
+# SELECT CONCAT(first_name, ' ', last_name)
+SELECT *
 FROM employees
 WHERE hire_date IN (SELECT hire_date FROM employees WHERE emp_no = 101010);
 
@@ -9,7 +10,6 @@ WHERE hire_date IN (SELECT hire_date FROM employees WHERE emp_no = 101010);
 SELECT DISTINCT title
 FROM titles
 WHERE emp_no IN (SELECT emp_no FROM employees WHERE first_name = 'Aamod' );
-
 
 # Find all the current department managers that are female.
 SELECT first_name, last_name
@@ -29,4 +29,10 @@ ORDER BY dept_name;
 
 SELECT first_name, last_name
 FROM employees WHERE emp_no IN (SELECT emp_no FROM salaries WHERE salary = (SELECT MAX(salary) FROM salaries));
-
+#  or
+SELECT *
+FROM employees e
+where e.emp_no =
+(select s.emp_no
+from salaries s order by salary desc
+limit 1)
